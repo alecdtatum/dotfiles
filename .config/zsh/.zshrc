@@ -34,7 +34,7 @@ setopt HIST_IGNORE_DUPS
 export PATH=$PATH:~/.local/bin
 
 # git
-alias cdgit = 'cd ~/documents/repositories'
+alias cdgit='cd ~/documents/repositories'
 
 # music
 alias nstream1='ncmpcpp -c ~/.config/ncmpcpp/config -h 10.0.0.16'
