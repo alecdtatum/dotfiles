@@ -1,2 +1,2 @@
 # dotfiles
-These dotfiles are desktop-specific.
+These dotfiles are laptop-specific.

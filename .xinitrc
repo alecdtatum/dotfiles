@@ -9,24 +9,16 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # swap colon and semicolon
-xmodmap -e "keycode 47 = colon semicolon" &
+exec xmodmap -e "keycode 47 = colon semicolon" &
 
-# modify print screen
-xmodmap -e "keycode 107 = XF86AudioPrev XF86Launch1" &
-
-# modify scroll lock
-xmodmap -e "keycode 78 = XF86AudioPlay XF86Launch2" &
-
-# modify pause break
-xmodmap -e "keycode 127 = XF86AudioNext XF86Launch3" &
-
-# set background
-exec feh --bg-fill /mnt/files/documents/backgrounds/abstract.png &
+# start xbindkeys
+exec xbindkeys -f ~/.config/xbindkeys/xbindkeysrc &
 
 # enable compositing
-exec compton -CGbf &
+exec compton -CGb &
 
-xrdb ~/.Xresources
+# enable wallpaper
+exec feh --bg-fill ~/documents/backgrounds/abstract.png &
 
 # start i3
 exec i3

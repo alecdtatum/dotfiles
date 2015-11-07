@@ -32,18 +32,15 @@ setopt HIST_IGNORE_DUPS
 
 # environment variables
 export PATH=$PATH:~/.local/bin
-export MPD_HOST=10.0.0.16
-
-# beets
-alias beetup='beet mbsync'
-alias imptorr='beet import /mnt/files/downloads/torrents/complete'
-alias impslsk='beet import /mnt/files/downloads/soulseek/complete'
 
 # git
-alias cdgit='cd /mnt/files/documents/repositories'
+alias cdgit = 'cd ~/documents/repositories'
 
 # music
-alias music='ncmpcpp -c ~/.config/ncmpcpp/config'
+alias nstream1='ncmpcpp -c ~/.config/ncmpcpp/config -h 10.0.0.16'
+alias nstream2='ncmpcpp -c ~/.config/ncmpcpp/config -h 50.158.76.70'
+alias mstream1='mpv http://10.0.0.16:8000/mpd.mp3'
+alias mstream2='mpv http://50.158.76.70:8000/mpd.mp3'
 
 # networking
 alias nstatus1='systemctl status systemd-networkd.service'
@@ -77,4 +74,3 @@ alias vcedit='sudo vim /usr/share/vim/vim74/colors/template.vim'
 
 # miscellaneous
 alias chrc='source ~/.local/config/zsh/.zshrc'
-alias viz='mpdviz -v "spectrum"'

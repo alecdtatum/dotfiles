@@ -63,9 +63,7 @@
         "sublime-project"
     ],
     "watch_folders": [
-        "~/",
-		"/mnt/files/books",
-		"/mnt/files/documents"
+        "~/"
     ],
     "webbrowser": "xdg-open"
 }

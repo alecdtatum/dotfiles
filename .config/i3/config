@@ -28,9 +28,6 @@ floating_modifier $m
 bindsym $m+t exec urxvt
 bindsym $m+s exec dmenu_extended_run
 bindsym $m+b exec tor-browser-en
-bindsym XF86AudioPlay exec mpc toggle
-bindsym XF86AudioPrev exec mpc prev
-bindsym XF86AudioNext exec mpc next
 
 # focus
 bindsym $m+$left focus left
@@ -96,35 +93,13 @@ bindsym $m+q kill
 bindsym $m+Shift+c reload
 bindsym $m+Shift+r restart
 
-# workspace assignments
-workspace 1 output DVI-0 
-workspace 2 output HDMI-0
-workspace 3 output HDMI-0
-workspace 4 output HDMI-0
-workspace 5 output DisplayPort-1
-workspace 6 output DisplayPort-1
-workspace 7 output DisplayPort-1
-
-# google hangouts extension
-assign [instance = "crx_nckgahadagoaajjgafhacjanaoiihapd"] → 6
-
-# teamspeak
-assign [instance = "ts3client_linux_amd64"] → 6
-
-# steam
-assign [instance = "Steam"] → 7
-for_window [title="Friends"] move right, resize shrink width 30 px or 30 ppt
-
-# dolphin
-assign [instance = "dolphin-emu"] → 5
-
 # i3bar
 bar {
-	status_command ~/.config/i3/i3status.sh
+	status_command i3status --config ~/.config/i3/i3status.conf
 	font pango: Roboto 11px
 
 	colors {
-	background          #222222
+	background          #222222    
 
 	focused_workspace   #666666 #666666 #FFFFFF 
 	active_workspace    #444444 #444444 #FFFFFF
