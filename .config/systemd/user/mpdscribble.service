@@ -1,0 +1,11 @@
+[Unit]
+Description=mpdscribble
+Requires=mpd.service
+After=mpd.service
+
+[Service]
+ExecStart=/usr/bin/mpdscribble -D --conf ${HOME}/.config/mpdscribble/mpdscribble.conf
+Restart=always
+
+[Install]
+WantedBy=default.target

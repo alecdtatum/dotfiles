@@ -1,0 +1,134 @@
+# for reference, use the official guide:
+# http://i3wm.org/docs/userguide.html
+
+# font
+font pango:Terminus 11px
+
+# borders
+new_window none
+new_float none
+
+# gaps
+# for use with the i3 fork by Airblader:
+# https://github.com/Airblader/i3
+smart_gaps on
+gaps inner 8
+gaps outer 0
+	
+# variables
+set $m Mod4
+set $up k
+set $down j
+set $left h
+set $right l
+
+floating_modifier $m
+
+# programs
+bindsym $m+t exec urxvt
+bindsym $m+s exec dmenu_extended_run
+bindsym $m+b exec tor-browser-en
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioPrev exec mpc prev
+bindsym XF86AudioNext exec mpc next
+
+# focus
+bindsym $m+$left focus left
+bindsym $m+$down focus down
+bindsym $m+$up focus up
+bindsym $m+$right focus right
+
+# move
+bindsym $m+Shift+$left move left
+bindsym $m+Shift+$down move down
+bindsym $m+Shift+$up move up
+bindsym $m+Shift+$right move right
+
+# layout
+bindsym $m+x split h
+bindsym $m+z split v
+bindsym $m+f fullscreen
+
+# floating
+bindsym $m+Shift+space floating toggle
+bindsym $m+space focus mode_toggle
+
+# scratchpad
+bindsym $m+Shift+Return move scratchpad
+bindsym $m+Return scratchpad show
+
+# switch to workspace
+bindsym $m+1 workspace 1
+bindsym $m+2 workspace 2
+bindsym $m+3 workspace 3
+bindsym $m+4 workspace 4
+bindsym $m+5 workspace 5
+bindsym $m+6 workspace 6
+bindsym $m+7 workspace 7
+bindsym $m+8 workspace 8
+bindsym $m+9 workspace 9
+bindsym $m+0 workspace 10
+
+# move to workspace
+bindsym $m+Shift+1 move container to workspace 1
+bindsym $m+Shift+2 move container to workspace 2
+bindsym $m+Shift+3 move container to workspace 3
+bindsym $m+Shift+4 move container to workspace 4
+bindsym $m+Shift+5 move container to workspace 5
+bindsym $m+Shift+6 move container to workspace 6
+bindsym $m+Shift+7 move container to workspace 7
+bindsym $m+Shift+8 move container to workspace 8
+bindsym $m+Shift+9 move container to workspace 9
+bindsym $m+Shift+0 move container to workspace 10
+
+# resizing
+bindsym $m+r mode "resize"
+mode "resize" {
+    bindsym $left       resize shrink width 10 px or 10 ppt
+    bindsym $down       resize grow height 10 px or 10 ppt
+    bindsym $up         resize shrink height 10 px or 10 ppt
+    bindsym $right      resize grow width 10 px or 10 ppt
+    bindsym Escape mode "default"
+    }
+
+# i3
+bindsym $m+q kill
+bindsym $m+Shift+c reload
+bindsym $m+Shift+r restart
+
+# workspace assignments
+workspace 1 output DVI-0 
+workspace 2 output HDMI-0
+workspace 3 output HDMI-0
+workspace 4 output HDMI-0
+workspace 5 output DisplayPort-1
+workspace 6 output DisplayPort-1
+workspace 7 output DisplayPort-1
+
+# google hangouts extension
+assign [instance = "crx_nckgahadagoaajjgafhacjanaoiihapd"] → 6
+
+# teamspeak
+assign [instance = "ts3client_linux_amd64"] → 6
+
+# steam
+assign [instance = "Steam"] → 7
+for_window [title="Friends"] move right, resize shrink width 30 px or 30 ppt
+
+# dolphin
+assign [instance = "dolphin-emu"] → 5
+
+# i3bar
+bar {
+	status_command ~/.config/i3/i3status.sh
+	font pango: Roboto 11px
+
+	colors {
+	background          #222222
+
+	focused_workspace   #666666 #666666 #FFFFFF 
+	active_workspace    #444444 #444444 #FFFFFF
+	inactive_workspace  #222222 #222222 #FFFFFF
+	urgent_workspace    #777777 #AAAAAA #FFFFFF
+	}
+}

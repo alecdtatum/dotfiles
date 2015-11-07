@@ -1,0 +1,73 @@
+library: ~/.config/beets/library.db
+directory: /mnt/music
+art_filename: Cover
+threaded: no
+per_disc_numbering: no
+
+ui:
+    color: yes
+    colors:
+        text_success: green
+        text_warning: yellow
+        text_error: red
+        text_highlight: red
+        text_highlight_minor: lightgray
+        action_default: turquoise
+        action: blue
+
+import:
+    write: yes
+    copy: no
+    move: yes
+    link: no
+    resume: ask
+    incremental: no
+    quiet_fallback: skip
+    none_rec_action: ask
+    timid: no
+    log: ~/.config/beets/log
+    default_action: apply
+    detail: no
+    group_albums: no
+    autotag: yes
+
+match:
+    strong_rec_thresh: 0.10
+    medium_rec_thresh: 0.30
+    rec_gap_thresh: 0.50
+    preferred:
+        media: ['CD', 'Digital Media|File']
+
+paths:
+    default: %the{$albumartist}/$albumtype/[$year] $album/$track. $title
+    comp: Various Artists/[$year] $album/$track. $title
+    albumtype:album: %the{$albumartist}/Albums/[$year] $album/$track. $title
+    albumtype:compilation: %the{$albumartist}/Compilations/[$year] $album/$track. $title
+    albumtype:ep: %the{$albumartist}/Extended Plays/[$year] $album/$track. $title
+    albumtype:live: %the{$albumartist}/Live Albums/[$year] $album/$track. $title
+    albumtype:mixtape: %the{$albumartist}/Mixtapes/[$year] $album/$track. $title
+    albumtype:remix: %the{$albumartist}/Remixes/[$year] $album/$track $title
+    albumtype:single: %the{$albumartist}/Singles/[$year] $album/$track. $title
+    albumtype:soundtrack: %the{$albumartist}/Soundtracks/[$year] $album/$track. $title
+
+plugins: chroma fetchart mbsync scrub zero the mpdupdate replaygain
+
+chroma:
+    auto: no 
+acoustid:
+    apikey: xNGRs0MS
+fetchart:
+    auto: yes
+    cover_names: Cover Front Art Album Folder
+    sources: coverart
+replaygain:
+    backend: gstreamer
+    overwrite: yes
+zero:
+    fields: genre lyrics comments
+the:
+    a: yes
+    the: yes
+mpd:
+    host: 10.0.0.16
+    port: 6600

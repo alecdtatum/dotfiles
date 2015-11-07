@@ -1,0 +1,34 @@
+ncmpcpp_directory = ~/.config/ncmpcpp
+lyrics_directory = ~/.cache/ncmpcpp
+mpd_host = 127.0.0.1
+mpd_port = 6600
+mpd_music_dir = /mnt/music
+
+visualizer_fifo_path = /tmp/mpd.fifo
+visualizer_output_name = fifo
+visualizer_sync_interval = 30
+visualizer_in_stereo = yes
+visualizer_type = spectrum
+visualizer_color = white
+
+song_columns_list_format = (15)[white]{a} (5f)[white]{n} (40)[white]{t|f:Title} (35)[white]{b} (10)[white]{l}
+alternative_header_first_line_format = %a
+alternative_header_second_line_format = %t
+
+playlist_shorten_total_times = yes
+progressbar_look = ─|─
+media_library_primary_tag = album_artist
+header_visibility = no
+statusbar_visibility = no
+titles_visibility = no
+follow_now_playing_lyrics = yes
+fetch_lyrics_for_current_song_in_background = yes
+startup_screen= media_library
+display_volume_level = no
+ignore_leading_the = yes
+
+#main_window_color = white
+#main_window_highlight_color = black
+#active_column_color = white
+#empty_tag_color = black
+#progressbar_elapsed_color = white
