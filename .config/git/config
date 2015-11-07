@@ -1,0 +1,7 @@
+[user]
+	name = Alec Tatum
+	email = alec@rickshaw.xyz
+[core]
+	editor = vim
+[credential]
+	helper = cache --timeout 3600

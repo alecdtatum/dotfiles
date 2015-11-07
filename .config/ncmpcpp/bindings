@@ -1,0 +1,20 @@
+# vim key bindings
+
+def_key "k"
+	scroll_up
+def_key "j"
+	scroll_down
+def_key 260 "h"
+	previous_column
+def_key 261 "l"
+	next_column
+def_key "N"
+	previous_found_item
+def_key "n"
+	next_found_item
+def_key "."
+	show_lyrics
+def_key 262 "g"
+	move_home
+def_key 360 "G"
+	move_end

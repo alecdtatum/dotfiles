@@ -1,0 +1,21 @@
+" set vim file locations
+set backup
+set backupdir=$XDG_CACHE_HOME/vim,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=$XDG_CACHE_HOME/vim,/tmp
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
+let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
+
+" set colorscheme
+
+" enable syntax highlighting
+syntax enable
+
+" tabs
+set tabstop=4 " visual
+set softtabstop=4 " insert
+
+set number " show line numbers
+set wildmenu " visual autocomplete
+set wildmode=longest,list,full

@@ -1,0 +1,60 @@
+"3.10.1 (created: 2015/08/25 00:41:59)
+
+" about:config tweaks
+set! browser.tabs.animate=false
+
+" style tweaks
+highlight CmdLine background: #777; color: #FFF; transition: all 0.25s;
+highlight CmdLine>* font-family: Roboto;
+highlight CompDesc width: 500px; max-width: 500px; color: #FFF;
+highlight CompItem color: #FFF;
+highlight CompItem[selected] background: #777; color: #FFF;
+highlight CompTitle background: #555;
+highlight CompTitle>* color: #FFF;
+highlight ContentSeparator border: none;
+highlight ErrorMsg background: #000; color: red;
+highlight Filter background: #777; color: #FFF;
+highlight Hint background: #000; font: 12px Roboto; color: white; padding: 0px 1px 0px 1px; z-index: 99999999999999999999999;
+highlight HintActive background: #777; color: #FFF;
+highlight HintElem background: #777; color: #FFF;
+highlight Indicator color: #FFF;
+highlight InfoMsg background: #777; color: #FFF;
+highlight Keyword color: #000;
+highlight Mapping color: #777;
+highlight ModeMsg background: #000; color: #FFF; border-radius: 1px; padding: 5px 3px;
+highlight NonText color: #FFF; min-height: 16px; padding-left: 2px;
+highlight Normal background: #000; font-family: Roboto; color: #FFF;
+highlight Null color: #FFF;
+highlight PromptText background: #000; color: #FFF;
+highlight StatusLine background: #000; font-family: Roboto; color: #CCC;
+highlight String color: #FFF;
+highlight Title background: 000; color: #FFF;
+highlight URL text-decoration: none; color: #FFF;
+
+" faster navigation
+nnoremap j 3j
+nnoremap k 3k
+nnoremap h 3h
+nnoremap l 3l
+
+" general tweaks
+set cpt=b
+set editor=vim
+set defsearch=startpage
+set focuscontent=true
+set gui=nonavigation,tabs
+set hc=hjklasdf
+set hi=0
+set hls=false 
+set maxitems=15
+set msgs=0
+set mto=2500
+set rtp=/home/alec/.local/config/vimperator
+set sb=false
+set smd=false
+set status=location
+set titlestring=nightly
+set vbs=0
+source! /home/alec/.vimperatorrc.local
+
+" vim: set ft=vimperator:
