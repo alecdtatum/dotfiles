@@ -12,7 +12,7 @@
 #EDITOR="$EDITOR"
 #FORCEENGLISH=0
 #FORCE=0
-#TMPDIR="/tmp"
+TMPDIR="/mnt/files/downloads/temp/yaourt"
 #NO_TESTDB=0
 
 # SUDO
@@ -34,10 +34,8 @@
 #AURVOTE=1
 
 # Build
-#EXPORT=0           # Export to 1: EXPORTDIR or PKGDEST
-                    # 2: pacman cache (as root)
-#EXPORTSRC=0        # Need EXPORT>0 to be used
-#EXPORTDIR=""       # If empty, use makepkg's connfiguration (see makepkg.conf)
+EXPORT=1
+EXPORTDIR="/mnt/files/downloads/temp/yaourt"
 
 # Prompt
 #NOCONFIRM=0
